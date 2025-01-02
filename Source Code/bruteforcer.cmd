@@ -378,6 +378,9 @@ goto :mainmenu
         if "%%a" equ "SSID" (
             set /a wifi_index=!wifi_index!+1
             set wifi[!wifi_index!]_ssid=%%d
+
+      if "!current_ssid!=="""  (
+   set "current_ssid=Hidden_Network"
         )
 
         if "%%a" equ "Signal" (
